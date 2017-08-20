@@ -1,33 +1,6 @@
-<?php require_once("Includes/functions.php"); ?>
-<?php require_once("Includes/sessions.php"); ?>
-<?php include("Includes/db.php"); ?>
-<?php confirm_logged_in(); ?>
-<?php
-$error = "";
-if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    
-    $count = 0;
-    $res = "SELECT * FROM member WHERE username = '$_POST[username]' AND role = 'admin'";
-    $result = mysqli_query($conn, $res);
-    //$member = mysqli_fetch_assoc($select_set);
-    $count = mysqli_num_rows($result);
-
-    if (empty($username)) {
-        $error = "* Username is required";
-    } else if ($count == 0) {
-        $error = "* Username doesn't exist";
-    } else {
-        $query = "UPDATE member SET role = 'member' WHERE username = '$_POST[username]'";
-        mysqli_query($conn, $query);
-        redirect_to("manage_admin.php");
-    }
-}
-?> 
-
-<html lang="en">
+<html>
     <head>
-        <title>Delete Admin</title>
+        <title>Our Services</title>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,13 +8,15 @@ if (isset($_POST['submit'])) {
               rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Orbitron:400,900"
               rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/services.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed"
               rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-
     <body>
         <?php include("Includes/header.php"); ?>
         <div class="row">
@@ -75,8 +50,8 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="reg.php"><b>SIGN UP</b></a></li>';
                                     echo '<li><a href="profile_admin.php"><b>PROFILE</b></a></li>';
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
-                                    echo '<li class="active"><a href="about.php"><b>ABOUT US</b></a></li>';
-                                    echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
+                                    echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
+                                    echo '<li class="active"><a href="services.php"><b>SERVICES</b></a></li>';
                                     echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                     echo '<li><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
                                     echo '<li><a href="addUpdates.php"><b>ADD UPDATES</b></a></li>';
@@ -84,15 +59,15 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                     echo '<li><a href="profile_member.php"><b>PROFILE</b></a></li>';
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
-                                    echo '<li class="active"><a href="about.php"><b>ABOUT US</b></a></li>';
-                                    echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
+                                    echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
+                                    echo '<li class="active"><a href="services.php"><b>SERVICES</b></a></li>';
                                     echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                 }
                             } else {
                                 echo '<li><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                 echo '<li><a href="login.php"><b>SIGN IN</b></a></li>';
-                                echo '<li class="active"><a href="about.php"><b>ABOUT US</b></a></li>';
-                                echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
+                                echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
+                                echo '<li class="active"><a href="services.php"><b>SERVICES</b></a></li>';
                                 echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                             }
                             ?>
@@ -102,20 +77,52 @@ if (isset($_POST['submit'])) {
                 </div>
                 <!-- /.container-fluid --> </nav>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="jumbotron">
-                        <h1>Delete Admin</h1>
-                        <form action="delete_admin.php" method="post">
-                            <div class="form-group">
-                                <label>Username</label>
-                                <input type="text" name="username" class="form-control"><span class="error"> <?php echo $error; ?></span><br>
+        <div class="container-fluid">
+            <div class="row" id="background">
+                <div class="col-md-4">
 
-                                <input type="submit" name="submit" class="btn btn-danger" value="Delete Admin">
-                            </div>
-                        </form>
+                </div>
+                <div class="col-md-4">
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <b>OUR SERVICE</b>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-md-2 icon text-center">
+                        <br><br>
+                        <i class="fa fa-user-md icon_list" style="font-size:100px;"></i>
+                        <h4>CHANNELING</h4>
                     </div>
+                    <div class="col-md-2 icon text-center">
+                        <br><br>
+                        <i class="fa fa-ambulance icon_list" style="font-size:100px;"></i>
+                        <h4>AMBULANCE</h4>
+                    </div>
+                    <div class="col-md-2 icon text-center">
+                        <br><br>
+                        <i class="fa fa-stethoscope icon_list" style="font-size:100px;"></i>
+                        <h4>MEDICINE</h4>
+                    </div>
+                    <div class="col-md-2 icon text-center">
+                        <br><br>
+                        <i class="fa fa-medkit icon_list" style="font-size:100px;"></i>
+                        <h4>NURSING</h4>
+                    </div>
+                    <div class="col-md-2 icon text-center">
+                        <br><br>
+                        <i class="fa fa-heartbeat icon_list" style="font-size:100px;"></i>
+                        <h4>CHECK UPS</h4>
+                    </div>
+                    <div class="col-md-2 icon text-center">
+                        <br><br>
+                        <i class="fa fa-wheelchair icon_list" style="font-size:100px;"></i>
+                        <h4>WHEELCHAIR</h4>
+                    </div>
+
                 </div>
             </div>
         </div>

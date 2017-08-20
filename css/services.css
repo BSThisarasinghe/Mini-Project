@@ -1,0 +1,32 @@
+#background{
+    position: relative;
+    background-image: url(../pics/service.jpg);
+    background-size: cover;
+    width: 103%;
+    padding-left: 0;
+    padding-right: 0;
+    height: 600px;
+}
+
+#background b{
+    color: white;
+    font-size: 40pt;
+}
+
+.icon{
+    height: 200px;
+    box-shadow: 1px 1px 1px gray;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.icon:hover{
+    box-shadow: 2px 2px 2px gray;
+}
+
+.icon_list{
+    transition: transform 300ms ease-in-out;
+}
+
+.icon_list:hover{
+    transform: rotate(360deg);
+}

@@ -1,6 +1,19 @@
 <?php require_once("Includes/functions.php"); ?>
 <?php require_once("Includes/sessions.php"); ?>
 <?php include("Includes/db.php"); ?>
+<?php
+    $sql = "SELECT * FROM updates";
+    $result_set = mysqli_query($conn, $sql);
+    $result = mysqli_fetch_assoc($result_set);
+    if ($result["name"] == "Doctor is absent today"){
+        echo '<style>';
+        echo '#doctor{';
+        echo 'visibility: hidden;';
+        echo '}';
+        echo '</style>';
+    }
+?>
+.
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
     <head>
@@ -56,6 +69,7 @@
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
                                     echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                     echo '<li><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
+                                    echo '<li><a href="addUpdates.php"><b>ADD UPDATES</b></a></li>';
                                 } else {
                                     echo '<li class="active"><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                     echo '<li><a href="profile_member.php"><b>PROFILE</b></a></li>';
@@ -150,9 +164,28 @@
                         <b>New Updates</b>
                     </h3>
                     <br>
-                    <p>fdfsdds fdsfdfdsf fdfddf dfsder rerr ghh hhgdfgfd ggrhh
-                        fdggdg e3424 d dfd fs ff f dfd f rtr fgdfgfdggg dfsfdfs sfsdf
-                        ffdfsf dfsf fdsfsddf fdfssdf fsdfs dffd fdsfss fdsffds</p>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="<?php echo $result['picture']; ?>" class="img-responsive img-circle img-thumbnail" id="doctor">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label><h3><?php echo $result["name"]; ?></h3></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label><h5><?php echo $result["work"]; ?></h5></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label><p><?php echo $result["date"]; ?></p></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br> <br>
                 </div>
             </div>
