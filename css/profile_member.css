@@ -1,0 +1,15 @@
+#myModal{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#visit{
+    border: 1px solid  #a8aeaf;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#visit:hover{
+    border: 1px solid #78bac6;
+    box-shadow: 2px 2px 2px gray;
+}

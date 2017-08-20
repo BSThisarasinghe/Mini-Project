@@ -1,0 +1,24 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto; 
+	background-image: url(../pics/background.jpg);
+	background-size: cover;
+	background-attachment:fixed;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#background{
+	width: 105%;
+	height: 500px;
+	background-color: #048263;
+	opacity: 0.9;
+	color: white;
+}
+
+#login{
+	background-color:  #023e17;
+	padding-left: 30px;
+	padding-right: 30px;
+}
