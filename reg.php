@@ -124,7 +124,6 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
                                     echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                     echo '<li><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
                                     echo '<li><a href="addUpdates.php"><b>ADD UPDATES</b></a></li>';
                                 } else {
@@ -133,14 +132,12 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
                                     echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                 }
                             } else {
                                 echo '<li><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                 echo '<li><a href="login.php"><b>SIGN IN</b></a></li>';
                                 echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                 echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                             }
                             ?>
                         </ul>
@@ -177,9 +174,9 @@ if (isset($_POST['submit'])) {
                                 <label>Username</label> 
                                 <input type="text" class="form-control" value="<?php echo $unameErr; ?>" style="color: <?php echo $color; ?>" placeholder="Username" name="username" id="username"><br>
                                 <label>Password</label>
-                                <input type="password" class="form-control" value="<?php echo $passwordErr; ?>" style="color: <?php echo $color; ?>" placeholder="Enter your password" name="password" id="password"><br>
+                                <input type="text" class="form-control" value="<?php echo $passwordErr; ?>" style="color: <?php echo $color; ?>" placeholder="Enter your password" name="password" id="password"><br>
                                 <label>Confirm Password</label>
-                                <input type="password" class="form-control" value="<?php echo $conpassErr; ?>" style="color: <?php echo $color; ?>" placeholder="Re-enter your password" name="conpass" id="conpass"><br>
+                                <input type="text" class="form-control" value="<?php echo $conpassErr; ?>" style="color: <?php echo $color; ?>" placeholder="Re-enter your password" name="conpass" id="conpass"><br>
                                 <hr>
                                 <input type="submit" class="btn btn-success" value="REGISTER" name="submit" style="background-color: #023e17;" id=""submit">
                             </div>

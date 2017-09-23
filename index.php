@@ -67,7 +67,6 @@
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
                                     echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                     echo '<li><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
                                     echo '<li><a href="addUpdates.php"><b>ADD UPDATES</b></a></li>';
                                 } else {
@@ -76,14 +75,12 @@
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
                                     echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                 }
                             } else {
                                 echo '<li class="active"><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                 echo '<li><a href="login.php"><b>SIGN IN</b></a></li>';
                                 echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                 echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                             }
                             ?>
                         </ul>

@@ -45,6 +45,7 @@ username.onfocus = function() {
 
 password.onfocus = function() {
     password.setAttribute("style", "color: black;");
+    password.setAttribute("type", "password");
     if (password.value == "* Password is required") {
         password.setAttribute("value", "");
     } else if (password.value == "* Password should have at least 8 characters") {
@@ -54,6 +55,7 @@ password.onfocus = function() {
 
 conpass.onfocus = function() {
     conpass.setAttribute("style", "color: black;");
+    conpass.setAttribute("type", "password");
     if (conpass.value == "* Password confirming is required") {
         conpass.setAttribute("value", "");
     } else if (conpass.value == "* Password doesn't match") {

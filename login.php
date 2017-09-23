@@ -79,7 +79,6 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
                                     echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                     echo '<li><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
                                     echo '<li><a href="addUpdates.php"><b>ADD UPDATES</b></a></li>';
                                 } else {
@@ -88,14 +87,12 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
                                     echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                 }
                             } else {
                                 echo '<li><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                 echo '<li class="active"><a href="login.php"><b>SIGN IN</b></a></li>';
                                 echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                 echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                             }
                             ?>
                         </ul>
@@ -119,8 +116,7 @@ if (isset($_POST['submit'])) {
                                 <input type="password" class="form-control" placeholder="Password" name="password"><br><br>
                                 <input type="submit" value="Log In" name="submit" class="form-control btn btn-success"><br>
                             </div>
-                        </form>
-                        <a href="reg.php" style="color:white;">Click here to create an account</a><br><br><br>
+                        </form><br><br>
                     </div>
                 </div>
                 <div class="col-md-4">

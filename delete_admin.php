@@ -75,25 +75,22 @@ if (isset($_POST['submit'])) {
                                     echo '<li><a href="reg.php"><b>SIGN UP</b></a></li>';
                                     echo '<li><a href="profile_admin.php"><b>PROFILE</b></a></li>';
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
-                                    echo '<li class="active"><a href="about.php"><b>ABOUT US</b></a></li>';
+                                    echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
-                                    echo '<li><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
+                                    echo '<li class="active"><a href="manage_admin.php"><b>MANAGE ADMIN</b></a></li>';
                                     echo '<li><a href="addUpdates.php"><b>ADD UPDATES</b></a></li>';
                                 } else {
                                     echo '<li><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                     echo '<li><a href="profile_member.php"><b>PROFILE</b></a></li>';
                                     echo '<li><a href="logout.php"><b>LOGOUT</b></a></li>';
-                                    echo '<li class="active"><a href="about.php"><b>ABOUT US</b></a></li>';
+                                    echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                     echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                    echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                                 }
                             } else {
                                 echo '<li><a href="index.php"><b>HOME</b><span class="sr-only">(current)</span></a></li>';
                                 echo '<li><a href="login.php"><b>SIGN IN</b></a></li>';
-                                echo '<li class="active"><a href="about.php"><b>ABOUT US</b></a></li>';
+                                echo '<li><a href="about.php"><b>ABOUT US</b></a></li>';
                                 echo '<li><a href="services.php"><b>SERVICES</b></a></li>';
-                                echo '<li><a href="comments.php"><b>CONTACT</b></a></li>';
                             }
                             ?>
                         </ul>
@@ -110,7 +107,7 @@ if (isset($_POST['submit'])) {
                         <form action="delete_admin.php" method="post">
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" name="username" class="form-control"><span class="error"> <?php echo $error; ?></span><br>
+                                <input type="text" name="username" class="form-control"><span class="error" style="color: red;"> <?php echo $error; ?></span><br>
 
                                 <input type="submit" name="submit" class="btn btn-danger" value="Delete Admin">
                             </div>
