@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $uname = "root";
-$pwd = "18372652232";
+$pwd = "";
 $dbName = "dbmc";
 $conn = mysqli_connect($host, $uname, $pwd, $dbName);
 if (mysqli_connect_errno()) {

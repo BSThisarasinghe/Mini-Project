@@ -178,7 +178,8 @@ if (isset($_POST['submit'])) {
                                 <label>Confirm Password</label>
                                 <input type="text" class="form-control" value="<?php echo $conpassErr; ?>" style="color: <?php echo $color; ?>" placeholder="Re-enter your password" name="conpass" id="conpass"><br>
                                 <hr>
-                                <input type="submit" class="btn btn-success" value="REGISTER" name="submit" style="background-color: #023e17;" id=""submit">
+                                <input type="submit" class="btn btn-success" value="REGISTER" name="submit" style="background-color: #023e17;" id="submit">
+                                
                             </div>
                         </form>
                     </div>
